@@ -21,7 +21,7 @@
 			<li><a href="<?php print ( is_front_page() ? ( isset( $_REQUEST['scroll'] ) ? "/" : '#header' ) : get_bloginfo( 'home' ) ) ?>">Home</a></li>
 			<li><a href="<?php print ( is_front_page() ? '#about' : get_bloginfo( 'home' ) . "?scroll=about" ) ?>">About</a></li>
 			<li><a href="<?php print ( is_front_page() ? '#topics' : get_bloginfo( 'home' ) . "?scroll=topics" ) ?>">Topics</a></li>
-			<li><a href="<?php print ( is_front_page() ? '#testimonials' : get_bloginfo( 'home' ) . "?scroll=testimonials" ) ?>">Testimonials</a></li>
+			<li><a href="<?php print ( is_front_page() ? '#testimonials' : get_bloginfo( 'home' ) . "?scroll=testimonials" ) ?>">Reviews</a></li>
 			<li><a href="<?php print ( is_front_page() ? '#video' : get_bloginfo( 'home' ) . "?scroll=video" ) ?>">Videos</a></li>
 			<li><a href="/blog">Blog</a></li>
 			<li><a href="<?php print ( is_front_page() ? '#connect' : get_bloginfo( 'home' ) . "?scroll=connect" ) ?>">Connect</a></li>
