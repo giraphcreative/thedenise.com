@@ -1,0 +1,136 @@
+
+
+body {
+	margin-top: 0;
+	.csstransitions & {
+		@include prefix( "transition", "margin 300ms ease-in-out" );
+	}
+
+	@include respond-to( 769px ) { margin-top: 76px; }
+
+	&.open {
+		margin-top: 162px;
+		@include respond-to( 500px ) { margin-top: 167px; }
+		@include respond-to( 769px ) { margin-top: 76px; }
+	}
+}
+
+
+nav.main {
+	background: white url(../img/bg-brushed.jpg) center center no-repeat;
+	background-size: cover;
+	border-bottom: 10px solid $grey;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+	border-top: 100px solid #23282d;
+	margin-top: -100px;
+	@include clearfix;
+
+	.boxshadow & {
+		@include prefix( "box-shadow", "0 8px 0 rgba( 0, 0, 0, 0.3)" );
+	}
+
+	ul {
+		text-align: center;
+		height: 0;
+		overflow: hidden;
+		
+		.csstransitions & {
+			@include prefix( "transition", "height 300ms ease-in-out" );
+		}
+
+		@include respond-to( 769px ) { height: 72px; }
+
+		li {
+			display: inline;
+
+			a {
+				@include font-title;
+				padding: 9px 0;
+				color: darken( $grey, 10% );
+				text-decoration: none;
+				display: inline-block;
+				float: left;
+				width: 50%;
+				line-height: 24px;
+				font-size: 24px;
+				text-transform: uppercase;
+				white-space: nowrap;
+				@include prefix( "transition", "background 400ms ease-in-out, color 400ms ease-in-out" );
+
+				&:hover {
+					background: rgba( black, .1 );
+					color: $grey-dark;
+				}
+
+				@include respond-to( 600px ) {
+					width: 25%;
+					padding: 20px 0;
+				}
+
+				@include respond-to( 800px ) {
+					width: auto;
+					padding: 24px 5px;
+					float: none;
+					border: 0;
+				}
+
+				@include respond-to( 900px ) {
+					padding: 24px 15px;
+				}
+
+				@include respond-to( 1024px ) {
+					padding: 24px 40px;
+				}
+			}
+		}
+
+		&.open {
+			height: 171px;
+
+			@include respond-to( 600px ) {
+				height: 129px;
+			}
+
+			@include respond-to( 800px ) {
+				height: 72px;
+			}
+		}
+	}
+
+	.menu-toggle {
+		position: absolute;
+		bottom: -50px;
+		left: 20px;
+		padding: 0;
+		width: 50px;
+		height: 50px;
+		display: block;
+		text-indent: -200px;
+		overflow: hidden;
+		cursor: pointer;
+		border: 0;
+		
+		&, &:hover {
+			background: $purple url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAMAAACgaw2xAAAAQlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////8IX9KGAAAAFXRSTlMAsfS51A2+6cnu0ds/UQcva7D7E8RTPvJoAAAAW0lEQVQY063POQKAIAwF0W+ComwqkPtfVWsSOl453SATeYUoo4qpwovJI7lwKsElLFXslLgfSucEEhNBJpBDDG7wpwyUtiutYKWb+d0GL/ONKKY4/3iELoXk+QCXmhAnR7E6TAAAAABJRU5ErkJggg==) center center no-repeat;
+			@include prefix( "box-shadow", "0 5px 0 rgba( 0, 0, 0, 0.2 )" );
+			@include prefix( "border-radius", "0px 0px 30% 30%" );
+		}
+
+		@include respond-to( 500px ) {
+			width: 70px;
+			height: 70px;
+			bottom: -70px;
+		}
+
+		@include respond-to( 769px ) {
+			display: none;
+		}
+
+	}
+
+}
+

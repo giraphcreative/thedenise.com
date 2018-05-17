@@ -1,0 +1,72 @@
+
+
+.header {
+	position: relative;
+	text-align: center;
+	padding: 20px 0;
+
+	a {
+		border: 0;
+	}
+
+	.logo {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		background: $lime;
+		width: 100%;
+		height: 150px;
+		margin-top: -75px;
+
+		img {
+			position: relative;
+			top: -106px;
+			width: 320px;
+		}
+
+		@include respond-to( 768px ) {
+			height: 100px;
+			margin-top: -50px;
+
+			img {
+				top: -200px;
+				width: 500px;
+			}
+		}
+
+		@include respond-to( 1024px ) {
+			height: 116px;
+			margin-top: -70px;
+
+			img {
+				top: -239px;
+				width: auto;
+			}
+		}
+	}
+
+	.backgroundsize & {
+		background: url(../img/bg-header.jpg) top center no-repeat;
+		background-size: cover;
+	}
+
+	.backgroundsize .home & {
+		background: url(../img/bg-header.jpg) center center no-repeat;
+		background-size: cover;
+	}
+
+	&.interior {
+		height: 400px;
+
+		.logo {
+			height: 150px;
+
+			img {
+				width: 320px;
+				top: -106px;
+			}
+		}
+	}
+}
+

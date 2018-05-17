@@ -1,0 +1,487 @@
+
+
+// include our fonts
+@import url(//fonts.googleapis.com/css?family=EB+Garamond|Open+Sans:300italic,400italic,700italic,400,300,700|La+Belle+Aurore);
+
+// set our colors
+$purple: #904B8D;
+$grey: #58595B;
+$lime: #8DC63F;
+$grey-light: lighten( $grey, 50% );
+$grey-lighter: lighten( $grey, 54% );
+$grey-dark: darken( $grey, 20% );
+
+
+// import my sass library components
+// mixin respond-to()
+@import "../lib/mixins";
+
+// prefixer
+@import "../lib/prefixer";
+
+// the normalize/reset - Meyer
+@import "../lib/reset";
+
+// include our grid
+@import "../lib/grid";
+
+
+// import our components
+@import "fonts";
+@import "nav";
+@import "grid";
+@import "header";
+@import "content";
+@import "connect";
+
+
+// base styles
+body {
+	@include font;
+	font-size: 100%;
+	line-height: 1.4em;
+	overflow-x: hidden;
+	color: $grey-dark;
+}
+
+strong, th, b {
+	@include font-bold;
+}
+
+em {
+	@include font-italic;
+}
+
+strong em, em strong {
+	@include font-bold-italic;
+}
+
+a {
+	color: $grey-dark;
+	text-decoration: none;
+	border-bottom: 1px dotted $lime;
+	@include prefix( "transition", "color 400ms ease-in-out" );
+
+	&:hover {
+		color: lighten( $grey-dark, 15% );
+	}
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	padding: 9px 0;
+	line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2em;
+}
+
+h1 {
+	
+}
+
+h2 {
+	font-size: 2.7em;
+}
+
+h3 {
+	font-size: 1.4em;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+input[type=text], textarea, .gform_wrapper input[type=text], .gform_wrapper .ginput_complex input[type=text], .gform_wrapper input[type=url], .gform_wrapper input[type=email], .gform_wrapper textarea {
+	width: 100%;
+	padding: 15px !important;
+	border: 0;
+	font-size: 14px;
+	-webkit-appearance: none;
+	@include prefix( "border-radius", "0" );
+	@include font;
+	opacity: .7;
+	transition: opacity 500ms ease-in-out;
+
+	&:focus {
+		opacity: 1;
+	}
+}
+
+.gform_wrapper li {
+	padding: 8px 0;
+}
+
+.gform_wrapper textarea, textarea {
+	height: 150px;
+}
+
+input[type=submit], button, .btn {
+	display: block;
+	margin: 0 auto;
+	background: $lime;
+	color: $grey-dark;
+	border: 0;
+	font-size: 35px;
+	line-height: 35px;
+	padding: 15px 30px;
+	text-transform: uppercase;
+	cursor: pointer;
+	-webkit-appearance: none;
+	@include prefix( "border-radius", "0" );
+	@include prefix( "box-shadow", "0 0 15px rgba( 255, 255, 255, 0.3 )" );
+	@include prefix( "transition", "all 300ms ease-in-out" );
+	@include font-title;
+
+	&:hover {
+		@include prefix( "box-shadow", "0 0 35px rgba( 255, 255, 255, 0.6 )" );
+		white: $grey-dark;
+		opacity: .9;
+	}
+}
+
+
+
+// some general classes that affect multiple modules.
+section {
+	@include clearfix;
+	position: relative;
+	background: url(../img/bg-brushed-lg.jpg) top center no-repeat;
+	background-size: cover;
+
+	header {
+		@include clearfix;
+		background-size: cover;
+		padding: 30px 0 15px;
+
+		@include respond-to( 768px ) {
+			padding: 50px 0 30px;
+		}
+
+		h2 {
+			background: $lime;
+			padding: 15px 0;
+			font-size: 32px;
+			line-height: 40px;
+			color: $grey-dark;
+			@include font-title;
+			text-transform: uppercase;
+			text-align: center;
+			margin: 0;
+
+			@include respond-to( 768px ) {
+				font-size: 55px;
+				line-height: 60px;
+				padding: 30px 0;
+			}
+
+			@include respond-to( 1024px ) {
+				font-size: 65px;
+				line-height: 70px;
+				padding: 30px 0;
+			}
+		}
+
+		p {
+			text-align: center;
+			padding: 10px 30px;
+
+			@include respond-to( 768px ) {
+				padding: 20px 20%;
+				font-size: 1.3em;
+				line-height: 1.3em;
+			}
+		}
+	}
+
+	.inner {
+		@include clearfix;
+		padding: 4px 25px 25px;
+		max-width: 1220px;
+		margin: 0 auto;
+
+		ul {
+			list-style-type: none;
+
+			li {
+				position: relative;
+
+				&:before {
+		            content: "\25CF";
+		            counter-increment: item;
+		            color: $grey-dark;
+		            position: absolute;
+					left: -20px;
+					top: 3px;
+		        }
+			}
+		}
+
+		ol {
+			list-style-type: none;
+			counter-reset: item;
+
+			li {
+				position: relative;
+
+				&:before {
+		            content: counter(item) ") ";
+		            counter-increment: item;
+		            color: $grey-dark;
+		            position: absolute;
+					left: -30px;
+					top: 5px;
+		        }
+			}
+
+		}
+
+		ol, ul {
+			padding: 4px 0 4px 30px;
+
+			li {
+				padding: 4px 0;
+			}
+		}
+
+	}
+}
+
+
+section#about {
+	header {
+		h2 {
+			@include respond-to( 768px ) {
+				width: 50%;
+				float: left;
+			}
+		}
+
+		h3 {
+			display: none;
+
+			@include respond-to( 768px ) {
+				@include font-title;
+				display: block;
+				float: left;
+				width: 50%;
+				padding: 0 0 5px 0;
+				font-size: 110px;
+				line-height: 110px;
+				text-align: center;
+				color: $grey-dark;
+			}
+		}
+	}
+
+	.inner {
+		max-width: 1220px;
+		margin: 0 auto;
+		@include clearfix;
+		@include font-slab;
+
+		.blocks {
+			padding-bottom: 30px;
+			@include clearfix;
+
+			@include respond-to( 1024px ) {
+				width: 70%;
+				float: left;
+			}
+
+			.block {
+				padding: 20px;
+
+				img {
+					max-width: 50%;
+				}
+
+				@include respond-to( 768px ) {
+					width: 50%;
+					float: left;
+				}
+			}
+		}
+
+		button, .button {
+			margin-top: 10px;
+		}
+	}
+}
+
+
+section#topics {
+	background: $lime url(../img/bg-topics.jpg) center center no-repeat;
+	background-size: cover;
+	border-top: 30px solid darken( $grey, 10% );
+	border-bottom: 30px solid darken( $grey, 10% );
+	color: $grey-dark;
+
+	h2 {
+		background: transparent;
+	}
+
+	h3 {
+		text-transform: uppercase;
+	}
+}
+
+
+section#testimonials {
+	.wrap {
+		max-width: 1220px;
+		margin: 0 auto;
+	}
+
+	.inner {
+		@include clearfix;
+		padding: 0 25px;
+
+		img {
+			display: block;
+			margin: 0 auto;
+
+			@include respond-to( 500px ) {
+				width: 20%;
+				float: left;
+				clear: left;
+				margin: 0;
+			}
+		}
+
+		blockquote {
+			@include respond-to( 500px ) {
+				width: 77%;
+				margin-left: 1%;
+				float: left;
+			}
+
+			p {
+				color: $grey-dark;
+			}
+
+			.by-line {
+				display: block;
+				color: $grey;
+			}
+		}
+	}
+
+	.cloud {
+		padding: 0 20px;
+	}
+}
+
+
+section#video {
+	background: url(../img/bg-crowd.jpg) center center no-repeat;
+	background-size: cover;
+
+	.video-container {
+		max-width: 700px;
+		margin: 20px auto;
+		text-align: center;
+	}
+
+	a {
+		border: none;
+	}
+}
+
+
+section#connect {
+	header {
+		position: relative;
+		z-index: 100;
+	}
+
+	.inner {
+		padding: 0 20px 0 0;
+
+		.third {
+			margin: 0 1% 0 0;
+		}
+	}
+
+	.events {
+		position: relative;
+		z-index: 1;
+		background: darken( $grey-light, 15% );
+		box-shadow: 0 0 30px rgba( $grey-dark, .4 );
+		
+		ul {
+			font-size: 1.2em;
+			line-height: 1.5em;
+			text-transform: uppercase;
+			padding: 0;
+
+			li {
+				padding: 15px 0;
+
+				&.past {
+					text-decoration: line-through;
+					opacity: .5;
+				}
+	
+				&:before {
+					content: "";
+				}
+			}
+		}
+	}
+}
+
+
+.footer-border {
+	background: $lime url(../img/bg-stripes.png) center center no-repeat;
+	background-size: cover;
+	height: 40px;
+
+	@include respond-to( 768px ) {
+		height: 60px;
+	}
+}
+
+
+footer {
+	background: $grey-dark url(../img/bg-stripes.png) center center no-repeat;
+	background-size: cover;
+	padding: 20px;
+	color: white;
+	text-align: center;
+	font-size: 1.2em;
+	line-height: 1.6em;
+	@include clearfix;
+
+	.logo {
+		max-width: 200px;
+	}
+
+	a {
+		color: white;
+		border: none;
+
+		&:hover {
+			color: darken( $grey-light, 20% );
+		}
+	}
+	
+	span {
+		font-size: 1.3em;
+	}
+
+	.social {
+		a {
+			border: none;
+		}
+	}
+
+	@include respond-to( 768px ) {
+		text-align: left;
+
+		.info {
+			padding: 10px;
+		}
+	}
+}
+
