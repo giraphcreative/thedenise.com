@@ -129,7 +129,35 @@ get_header();
 
 		<div class="inner">
 			<div class="video-container">
-				<?php print_r( file_get_contents( ' https://www.googleapis.com/youtube/v3/search?key=AIzaSyDkl7iuPdifvKde8C4bT-SLLxNTVofogbo&channelId=UC-uNZsOnnrHsK1yiMeHJLrQ&part=snippet,id&order=date&maxResults=20') ); ?>
+				<?php 
+				/*
+		        // create curl resource 
+		        $ch = curl_init(); 
+
+		        // $output contains the output string 
+				$encoded = 'key=AIzaSyDkl7iuPdifvKde8C4bT-SLLxNTVofogbo&';
+				$encoded .= 'channelId=UC-uNZsOnnrHsK1yiMeHJLrQ&';
+				$encoded .= 'part=snippet,id&';
+				$encoded .= 'order=date&';
+				$encoded .= 'maxResults=20';
+
+				print_r( "https://www.googleapis.com/youtube/v3?" . $encoded );
+
+		        // set url 
+		        curl_setopt( $ch, CURLOPT_URL, "https://www.googleapis.com/youtube/v3?" . $encoded ); 
+
+		        //return the transfer as a string 
+		        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 ); 
+
+				// get the results
+		        $output = curl_exec( $ch ); 
+
+		        // close curl resource to free up system resources 
+		        curl_close( $ch );      
+
+		        print_r( $output );
+		        */
+				?>
 				<?php print apply_filters( 'the_content', 'https://www.youtube.com/watch?v=jCjJOiw32As' ); ?>
 				<p><a href="https://www.youtube.com/channel/UC-uNZsOnnrHsK1yiMeHJLrQ"><img src="<?php bloginfo('template_url') ?>/img/subscribe.png"></a>
 			</div>
