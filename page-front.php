@@ -155,16 +155,25 @@ get_header();
 				        'order' => 'ASC',
 				        'orderby' => 'meta_value',
 				        'meta_query' => array(
-	            			array('key' => '_p_event_start'))
+	            			array('key' => '_p_event_start'),
+							array(
+							    'key' => '_p_event_start',
+							    'value' => ( time() - ( 86400 * 60 ) ),
+							    'compare' => '>'
+							),
+	            		),
+	            		'posts_per_page' => 5
 	    			));
 					while ( have_posts() ) : the_post();
 						$event_time = get_cmb_value( 'event_start' );
-						?>
+						if ( $event_time > ( time() - ( 86400*60 ) ) ) {
+							?>
 						<li <?php print ( $event_time < time() ? 'class="past"' : '' ) ?>>
 							<?php print date( 'F Y', $event_time ); ?><br>
 							<?php show_cmb_value( 'event_location_text' ) ?>
 						</li>
-						<?php
+							<?php
+						}
 					endwhile;
 					?>
 					</ul>
