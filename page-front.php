@@ -16,11 +16,10 @@ get_header();
 
 		<div class="inner group">
 			<img src="<?php bloginfo('template_url') ?>/img/photo-denise.png" class="alignright">
-			<p>Denise Gabel is an innovative executive, author, dynamic speaker, emcee, and a remarkable coach. She is passionate about people and possibilities. She is a CHANGE AGENT.</p>
-			<p>Gabel is a vivid storyteller who brings leadership and innovation concepts to life with easy to apply analogies. In Grocery Town, a chapter from her upcoming book, the potato inspires us to admit when we need to be further challenged and rotated so we don’t get bored and rot. We need the courage to speak up and be part of the solution. At the same time, leaders are reminded to watch their groceries—be sure to fertilize and don’t be afraid to clean out the fridge.</p>
-			<p>A lifelong learner, she has been named a Woman to Watch. She is a summa cum laude graduate of Eastern Washington University and served as a member of the Berkeley Innovation Forum at the University of California Berkeley Haas School of Business. She also graduated from Harvard Business School’s Women’s Leadership Forum.</p>
-			<p>As a speaker, emcee, and change agent, Gabel is passionate about growing leaders, building strong corporate cultures, and inspiring people to embrace and drive change. By storytelling from the stage and clicking the keyboard to finish my book—she continues to make change possible, inspire people to stand in their own power, and help organizations think big. </p>
-			<p>Specialties: Strategy, Branding and Marketing, Innovation, Culture Development, Leadership, and Change Management.</p>
+			<?php 
+			$about = get_post( 202 );
+			print apply_filters( 'the_content', $about->post_content );
+			?>
 		</div>
 
 	</section>
@@ -129,35 +128,6 @@ get_header();
 
 		<div class="inner">
 			<div class="video-container">
-				<?php 
-				/*
-		        // create curl resource 
-		        $ch = curl_init(); 
-
-		        // $output contains the output string 
-				$encoded = 'key=AIzaSyDkl7iuPdifvKde8C4bT-SLLxNTVofogbo&';
-				$encoded .= 'channelId=UC-uNZsOnnrHsK1yiMeHJLrQ&';
-				$encoded .= 'part=snippet,id&';
-				$encoded .= 'order=date&';
-				$encoded .= 'maxResults=20';
-
-				print_r( "https://www.googleapis.com/youtube/v3?" . $encoded );
-
-		        // set url 
-		        curl_setopt( $ch, CURLOPT_URL, "https://www.googleapis.com/youtube/v3?" . $encoded ); 
-
-		        //return the transfer as a string 
-		        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 ); 
-
-				// get the results
-		        $output = curl_exec( $ch ); 
-
-		        // close curl resource to free up system resources 
-		        curl_close( $ch );      
-
-		        print_r( $output );
-		        */
-				?>
 				<?php print apply_filters( 'the_content', 'https://www.youtube.com/watch?v=jCjJOiw32As' ); ?>
 				<p><a href="https://www.youtube.com/channel/UC-uNZsOnnrHsK1yiMeHJLrQ"><img src="<?php bloginfo('template_url') ?>/img/subscribe.png"></a>
 			</div>
