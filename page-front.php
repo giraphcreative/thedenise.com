@@ -123,7 +123,7 @@ get_header();
 	<section id="video" class="who">
 		
 		<header>
-			<h2>See Denise in Action</h2>
+			<h2>See &nbsp;Denise &nbsp;in &nbsp;Action</h2>
 		</header>
 
 		<div class="inner">
@@ -139,7 +139,7 @@ get_header();
 	<section id="connect" class="connect">
 			
 		<header>
-			<h2>Book Denise for Your Next Event</h2>
+			<h2>Book &nbsp;Denise &nbsp;for &nbsp;Your &nbsp;Next &nbsp;Event</h2>
 		</header>
 
 		<div class="wrap">
