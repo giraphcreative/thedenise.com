@@ -178,7 +178,7 @@ get_header();
 				</div>
 
 				<div class="form two-third group">
-					<p class="intro">Just 10 hours of coaching can build tomorrows leaders.  Denise invites you to give her an hour either onstage or in person and she will change your organization’s culture and your life. </p>
+					<p class="intro">As a speaker, emcee, and change agent, Gabel is passionate about growing leaders, building strong corporate cultures, and inspiring people to embrace and drive change. By storytelling from the stage and clicking the keyboard to finish my book—she continues to make change possible, inspire people to stand in their own power, and help organizations think big.</p>
 					<?php print do_shortcode( '[gravityform id="1" title="false" description="false"]' ); ?>
 				</div>
 
