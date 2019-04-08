@@ -40,20 +40,22 @@ get_header();
 					<li>Creating a high-performing culture</li>
 					<li>Growing the innovation competency</li>
 				</ul>
-				<br><br>
+				<br>
 				<h3>Professional Emcee</h3>
 				<ul>
 					<li>Specializes in conferences, corporate events, awards ceremonies, auction and galas
 					<li>Contagious energy, delivering clean humor while threading themes throughout content to deliver a high-impact event</li>
 				</ul>
+				<br>
 				<h3>Dynamic Speaker</h3>
+				<p>Denise is passionate about inspiring leaders to reach their full potential and remove the obstacles and self-doubt getting in their way. An in-demand speaker and emcee, Denise always wows the crowd with her engaging and thought provoking, workshop-style. Denise is often hired to speak at conferences of various sizes on topics of business, leadership, development, and Innovation. Some of her speeches include:</p>
 				<ul>
-					<li>Leadership</li>
-					<li>Change</li>
-					<li>Innovation</li>
-					<li>Motivation</li>
-					<li>Reach Your Full Potential</li>
-					<li>Culture Development</li>
+					<li>Developing Leaders while Developing Yourself</li>
+					<li>Women in Leadership - Creating the Life You Want</li>
+					<li>Strategic Change Management Done Right</li>
+					<li>Innovation for the 21st Century - Why your "The" is vital</li>
+					<li>Owning, Honing, and Loaning Your Gifts</li>
+					<li>Vulnerability as the key to success</li>
 				</ul>
 			</div>
 			<div class="half">
@@ -78,7 +80,7 @@ get_header();
 	<section id="testimonials" class="testimonials">
 			
 		<header>
-			<h2>Reviews</h2>
+			<h2>The &nbsp; Raving &nbsp; Fans</h2>
 		</header>
 
 		<div class="wrap">

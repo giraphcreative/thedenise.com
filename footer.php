@@ -23,6 +23,7 @@
 					<a href="https://www.linkedin.com/in/denise-gabel-5010794/" target="_blank"><img src="<?php bloginfo( 'template_url' ) ?>/img/social-linkedin.png"></a>
 					<a href="https://www.facebook.com/denise.gabel.1" target="_blank"><img src="<?php bloginfo( 'template_url' ) ?>/img/social-facebook.png"></a>
 					<a href="https://mobile.twitter.com/Denise_Gabel" target="_blank"><img src="<?php bloginfo( 'template_url' ) ?>/img/social-twitter.png"></a>
+					<a href="https://www.instagram.com/TheDeniseGabel/" target="_blank"><img src="<?php bloginfo( 'template_url' ) ?>/img/social-instagram.png"></a>
 				</div>
 			</div>
 		</div>
