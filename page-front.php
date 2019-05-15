@@ -7,6 +7,33 @@ get_header();
 
 ?>
 
+	<section id="topics" class="what">
+		
+		<header>
+			<h2>Author &nbsp; &bull; &nbsp; Speaker &nbsp; &bull; &nbsp; Mentor for Change</h3>
+		</header>
+
+		<div class="inner">
+			<div class="half">
+			<?php 
+			$about = get_post( 445 );
+			print apply_filters( 'the_content', $about->post_content );
+			?>
+			</div>
+			<div class="half">
+				<img src="<?php bloginfo('template_url'); ?>/img/logo-small.png">
+				<p>Want to customize topics? Just Ask!</p>
+				<p>Email us at<br>
+					<a href="mailto:info@thedenise.com">info@thedenise.com</a></p>
+				<p>Or call:<br>
+					(888) 665-7774<br>
+					(206) 775-8737</p>
+			</div>
+		</div>
+
+	</section>
+
+
 	<section id="about" class="what">
 		
 		<header>
@@ -22,54 +49,7 @@ get_header();
 			?>
 		</div>
 
-	</section>
-			
-
-	<section id="topics" class="what">
-		
-		<header>
-			<h2>Coach &nbsp; &bull; &nbsp; Emcee &nbsp; &bull; &nbsp; Speaker</h3>
-		</header>
-
-		<div class="inner">
-			<div class="half">
-				<h3>Remarkable Coach</h3>
-				<ul>
-					<li>Executive-level</li>
-					<li>Stretch and grow high potentials</li>
-					<li>Creating a high-performing culture</li>
-					<li>Growing the innovation competency</li>
-				</ul>
-				<br>
-				<h3>Professional Emcee</h3>
-				<ul>
-					<li>Specializes in conferences, corporate events, awards ceremonies, auction and galas
-					<li>Contagious energy, delivering clean humor while threading themes throughout content to deliver a high-impact event</li>
-				</ul>
-				<br>
-				<h3>Dynamic Speaker</h3>
-				<p>Denise is passionate about inspiring leaders to reach their full potential and remove the obstacles and self-doubt getting in their way. An in-demand speaker and emcee, Denise always wows the crowd with her engaging and thought provoking, workshop-style. Denise is often hired to speak at conferences of various sizes on topics of business, leadership, development, and Innovation. Some of her speeches include:</p>
-				<ul>
-					<li>Developing Leaders while Developing Yourself</li>
-					<li>Women in Leadership - Creating the Life You Want</li>
-					<li>Strategic Change Management Done Right</li>
-					<li>Innovation for the 21st Century - Why your "The" is vital</li>
-					<li>Owning, Honing, and Loaning Your Gifts</li>
-					<li>Vulnerability as the key to success</li>
-				</ul>
-			</div>
-			<div class="half">
-				<img src="<?php bloginfo('template_url'); ?>/img/logo-small.png">
-				<p>Want to customize topics? Just Ask!</p>
-				<p>Email us at<br>
-					<a href="mailto:info@thedenise.com">info@thedenise.com</a></p>
-				<p>Or call:<br>
-					(888) 665-7774<br>
-					(206) 775-8737</p>
-			</div>
-		</div>
-
-	</section>
+	</section>			
 
 
 	<div class="wrap text-center">
@@ -130,7 +110,7 @@ get_header();
 
 		<div class="inner">
 			<div class="video-container">
-				<?php print apply_filters( 'the_content', 'https://www.youtube.com/watch?v=jCjJOiw32As' ); ?>
+				<?php print apply_filters( 'the_content', 'https://www.youtube.com/watch?v=k-B_MWQ8Joc' ); ?>
 				<p><a href="https://www.youtube.com/channel/UC-uNZsOnnrHsK1yiMeHJLrQ"><img src="<?php bloginfo('template_url') ?>/img/subscribe.png"></a>
 			</div>
 		</div>
