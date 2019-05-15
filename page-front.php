@@ -16,7 +16,7 @@ get_header();
 		<div class="inner">
 			<div class="half">
 			<?php 
-			$about = get_post( 445 );
+			$about = get_post( 446 );
 			print apply_filters( 'the_content', $about->post_content );
 			?>
 			</div>
