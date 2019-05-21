@@ -52,6 +52,22 @@ get_header();
 	</section>			
 
 
+	<section id="video" class="who">
+		
+		<header>
+			<h2>See &nbsp;Denise &nbsp;in &nbsp;Action</h2>
+		</header>
+
+		<div class="inner">
+			<div class="video-container">
+				<?php print apply_filters( 'the_content', 'https://www.youtube.com/watch?v=k-B_MWQ8Joc' ); ?>
+				<p><a href="https://www.youtube.com/channel/UC-uNZsOnnrHsK1yiMeHJLrQ"><img src="<?php bloginfo('template_url') ?>/img/subscribe.png"></a>
+			</div>
+		</div>
+
+	</section>
+
+
 	<div class="wrap text-center">
 		<img src="<?php bloginfo('template_url') ?>/img/partners.png" />
 	</div>
@@ -102,22 +118,6 @@ get_header();
 	</section>
 
 
-	<section id="video" class="who">
-		
-		<header>
-			<h2>See &nbsp;Denise &nbsp;in &nbsp;Action</h2>
-		</header>
-
-		<div class="inner">
-			<div class="video-container">
-				<?php print apply_filters( 'the_content', 'https://www.youtube.com/watch?v=k-B_MWQ8Joc' ); ?>
-				<p><a href="https://www.youtube.com/channel/UC-uNZsOnnrHsK1yiMeHJLrQ"><img src="<?php bloginfo('template_url') ?>/img/subscribe.png"></a>
-			</div>
-		</div>
-
-	</section>
-
-
 	<section id="connect" class="connect">
 			
 		<header>
@@ -160,7 +160,7 @@ get_header();
 				</div>
 
 				<div class="form two-third group">
-					<p class="intro">As a speaker, emcee, and change agent, Gabel is passionate about growing leaders, building strong corporate cultures, and inspiring people to embrace and drive change. By storytelling from the stage and clicking the keyboard to finish my book—she continues to make change possible, inspire people to stand in their own power, and help organizations think big.</p>
+					<p class="intro">As a speaker, author, and change agent, Gabel is passionate about growing leaders, building strong corporate cultures, and inspiring people to embrace and drive change. By storytelling from the stage and clicking the keyboard to finish her book—she continues to make change possible, inspire people to stand in their own power, and help organizations think big.</p>
 					<?php print do_shortcode( '[gravityform id="1" title="false" description="false"]' ); ?>
 				</div>
 
