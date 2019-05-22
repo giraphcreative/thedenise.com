@@ -21,7 +21,7 @@ get_header();
 			?>
 			</div>
 			<div class="half">
-				<img src="<?php bloginfo('template_url'); ?>/img/logo-small.png">
+				<img src="<?php bloginfo('template_url'); ?>/img/logo-small.png?v=1">
 				<p>Want to customize topics? Just Ask!</p>
 				<p>Email us at<br>
 					<a href="mailto:info@thedenise.com">info@thedenise.com</a></p>

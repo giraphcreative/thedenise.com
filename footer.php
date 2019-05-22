@@ -13,7 +13,7 @@
 
 	<footer>
 		<div class="wrap">
-			<img src="<?php bloginfo( 'template_url' ) ?>/img/logo-small.png" class="alignright logo">
+			<img src="<?php bloginfo( 'template_url' ) ?>/img/logo-small.png?v=1" class="alignright logo">
 			<div class="info">
 				<span><a href="mailto:info@thedenise.com">info@thedenise.com</a><br></span>
 				<a href="tel:8886657774">(888) 665-7774</a><br>
