@@ -69,7 +69,7 @@ get_header();
 
 
 	<div class="wrap text-center">
-		<img src="<?php bloginfo('template_url') ?>/img/partners.png" />
+		<img src="<?php bloginfo('template_url') ?>/img/partners.jpg" />
 	</div>
 
 
