@@ -106,12 +106,6 @@ get_header();
 					<span class="by-line">Lynn Heckler, EVP Talent</span>
 				</blockquote>
 
-				<img src="<?php bloginfo('template_url') ?>/img/test-1.png" class="quarter">
-				<blockquote class="three-quarter">
-					<p>You are a strong and passionate facilitator. Bravo.</p>
-					<span class="by-line">Greg Mitchell, President/CEO</span>
-				</blockquote>
-
 			</div>
 		</div>
 
