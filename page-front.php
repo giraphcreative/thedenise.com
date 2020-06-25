@@ -115,7 +115,7 @@ get_header();
 	<section id="connect" class="connect">
 			
 		<header>
-			<h2>Book &nbsp;Denise &nbsp;for &nbsp;Your &nbsp;Next &nbsp;Event</h2>
+			<h2>Book &nbsp;Denise &nbsp;Now</h2>
 		</header>
 
 		<div class="wrap">
@@ -123,6 +123,11 @@ get_header();
 
 				<div class="events third text-center">
 					<img src="<?php bloginfo('template_url'); ?>/img/header-events.png">
+					<?php 
+					$about = get_post( 589 );
+					print apply_filters( 'the_content', $about->post_content );
+					?>
+					<!--
 					<ul>
 					<?php
 					query_posts(    array(  'post_type' => 'event',
@@ -151,10 +156,12 @@ get_header();
 					endwhile;
 					?>
 					</ul>
+					-->
+
 				</div>
 
 				<div class="form two-third group">
-					<p class="intro">As a speaker, author, and change agent, Gabel is passionate about growing leaders, building strong corporate cultures, and inspiring people to embrace and drive change. By storytelling from the stage and clicking the keyboard to finish her book—she continues to make change possible, inspire people to stand in their own power, and help organizations think big.</p>
+					<p class="intro">As a speaker, author, and change agent, Gabel is passionate about growing leaders, building strong corporate cultures, and inspiring people to embrace and drive change. By storytelling from the stage or through Zoom, she continues to make change possible, inspire people to stand in their own power, and help organizations think big.</p>
 					<?php print do_shortcode( '[gravityform id="1" title="false" description="false"]' ); ?>
 				</div>
 
