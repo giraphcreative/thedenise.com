@@ -60,8 +60,7 @@ get_header();
 
 		<div class="inner">
 			<div class="video-container">
-				<?php print apply_filters( 'the_content', 'https://www.youtube.com/watch?v=k-B_MWQ8Joc' ); ?>
-				<p><a href="https://www.youtube.com/channel/UC-uNZsOnnrHsK1yiMeHJLrQ"><img src="<?php bloginfo('template_url') ?>/img/subscribe.png"></a>
+				<?php print do_shortcode( '[snippet slug="home-video" /]' ); ?>
 			</div>
 		</div>
 
